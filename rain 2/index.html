@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Heart Rain</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="">
+
+    <style>
+        /* ---- reset ---- */
+        .github {
+            bottom: 10px;
+            right: 10px;
+            position: fixed;
+            border-radius: 10px;
+            background: #fff;
+            padding: 0 12px 6px 12px;
+            border: 1px solid #000;
+        }
+
+        .github a:hover,
+        .github a:link,
+        .github a:visited,
+        .github a:active {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .github img {
+            height: 30px;
+        }
+
+        .github #gh-project {
+            font-size: 20px;
+            padding-left: 5px;
+            font-weight: bold;
+            vertical-align: bottom;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- tsParticles container -->
+    <div id="tsparticles"></div>
+    <!-- https://github.com/matteobruni/tsparticles -->
+    <div class="github">
+        <a class="btn btn-link" href="https://github.com/matteobruni/tsparticles" title="Find more info on GitHub">
+            <img class="img-fluid" id="gh-mark"
+                src="https://cdn.matteobruni.it/images/particles/GitHub-Mark-120px-plus.png" alt="">
+            <span id="gh-project">tsParticles</span>
+        </a>
+        <div>
+            <a class="github-button" href="https://github.com/matteobruni/tsparticles" data-icon="octicon-star"
+                aria-label="Star matteobruni/tsparticles on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/matteobruni/tsparticles/fork"
+                data-icon="octicon-repo-forked" aria-label="Fork matteobruni/tsparticles on GitHub">Fork</a>
+        </div>
+    </div>
+    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-heart@2.9.3/tsparticles.shape.heart.min.js" ></script>
+<script>
+    (async () => {
+        await loadHeartShape(tsParticles);
+
+        await tsParticles.load("tsparticles", {
+            background: {
+                color: {
+                    value: "#301A47"
+                }
+            },
+            particles: {
+                color: {
+                    value: [
+                        "#FFAEBC",
+                        "#A0E7E5",
+                        "#B4F8C8",
+                        "#FBE7C6",
+                        "#FFC9AE",
+                        "#FFAEE5",
+                        "#A0C6E7",
+                        "#A0E7C2",
+                        "#B4F8EA",
+                        "#C2F8B4",
+                        "#F4FBC6",
+                        "#FBCDC6"
+                    ]
+                },
+                move: {
+                    angle: {
+                        offset: 0,
+                        value: 15
+                    },
+                    direction: "bottom",
+                    enable: true,
+                    outModes: {
+                        default: "out"
+                    },
+                    speed: 3
+                },
+                number: {
+                    value: 300
+                },
+                opacity: {
+                    value: 1
+                },
+                shape: {
+                    type: "heart"
+                },
+                size: {
+                    value: 16
+                },
+                roll: {
+                    darken: {
+                        enable: true,
+                        value: 30
+                    },
+                    enlighten: {
+                        enable: true,
+                        value: 30
+                    },
+                    enable: true,
+                    mode: "horizontal",
+                    speed: {
+                        min: 5,
+                        max: 15
+                    }
+                },
+                zIndex: {
+                    value: {
+                        min: 0,
+                        max: 100
+                    },
+                    opacityRate: 0,
+                    velocityRate: 2
+                }
+            }
+        });
+    })();
+
+</script>
+
+</html>
